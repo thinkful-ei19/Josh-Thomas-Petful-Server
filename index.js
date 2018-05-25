@@ -1,37 +1,51 @@
 'use strict';
 
+const {Queue, peek, display} = require('./queue');
+let cats = new Queue();
+let dogs = new Queue();
+function initSetup() {
+  cats.enqueue([
+    {
+      imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
+      imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+      name: 'Fluffy',
+      sex: 'Female',
+      age: 2,
+      breed: 'Bengal',
+      story: 'Thrown on the street'
+    }
+  ]);
+  dogs.enqueue(
+    [
+      {
+        imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+        imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
+        name: 'Zeus',
+        sex: 'Male',
+        age: 3,
+        breed: 'Golden Retriever',
+        story: 'Owner Passed away'
+      }
+    ]);
+}
+
+initSetup();
+
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
-//const { dbConnect } = require('./db-mongoose');
-// const {dbConnect} = require('./db-knex');
 
 const app = express();
 
+
 app.get('/api/cats', (req, res) => {
-  res.json({
-    imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
-    sex: 'Female',
-    age: 2,
-    breed: 'Bengal',
-    story: 'Thrown on the street'
-  });
+  res.json(peek(cats));
 });
 
 app.get('/api/dogs', (req, res) => {
-  res.json({
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
-    sex: 'Male',
-    age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
-  });
+  res.json(peek(dogs));
 });
 
 app.use(
@@ -58,7 +72,6 @@ function runServer(port = PORT) {
 }
 
 if (require.main === module) {
-  //dbConnect();
   runServer();
 }
 
