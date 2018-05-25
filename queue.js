@@ -70,31 +70,4 @@ function display(queue) {
 }
 
 
-
-let starTrekQ = new Queue();
-
-function main() {
-  starTrekQ.enqueue('Kirk');
-  starTrekQ.enqueue('Spock');
-  starTrekQ.enqueue('Uhura');
-  starTrekQ.enqueue('Sulu');
-  starTrekQ.enqueue('Checkov');
-
-  starTrekQ.dequeue();
-  starTrekQ.dequeue();
-  starTrekQ.dequeue();
-  starTrekQ.dequeue();
-  starTrekQ.dequeue();
-
-  starTrekQ.enqueue('Kirk');
-  starTrekQ.enqueue('Uhura');
-  starTrekQ.enqueue('Sulu');
-  starTrekQ.enqueue('Checkov');
-  //console.log(starTrekQ);
-}
-
-// main();
-//console.log(peek(starTrekQ));
-//console.log(display(starTrekQ));
-
 module.exports = {Queue, peek, display};
