@@ -53,8 +53,7 @@ app.delete('/api/cats', (req, res) => {
   console.log(randomPic);
   let randCat = catSeedData[Math.round(Math.random() * Math.floor(10))];
   randCat.imageURL = randomPic;
-  randCat.name = catSeedData[Math.floor(Math.random() * catSeedData.length)].name;
-  randCat.breed = catSeedData[Math.floor(Math.random() * catSeedData.length)].breed;
+  randCat.breed = catSeedData[Math.floor(Math.random() * Math.floor(10))].breed;
   console.log(randCat);
   cats.enqueue(randCat);
   res.json(peek(cats));
@@ -67,13 +66,10 @@ app.delete('/api/dogs', (req, res) => {
   console.log(randomPic);
   let randDog = dogSeedData[Math.round(Math.random() * Math.floor(10))];
   randDog.imageURL = randomPic;
-  randDog.name = dogSeedData[Math.floor(Math.random() * dogSeedData.length)].name;
-  randDog.breed = dogSeedData[Math.floor(Math.random() * dogSeedData.length)].breed;
+  randDog.breed = dogSeedData[Math.floor(Math.random() * Math.floor(10))].breed;
   console.log(randDog);
   dogs.enqueue(randDog);
-
-  // dogs.enqueue(dogSeedData[Math.round(Math.random() * Math.floor(10))]);
-  res.json(peek(cats));
+  res.json(peek(dogs));
 
 });
 

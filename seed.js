@@ -30,7 +30,7 @@ const catSeedData = [
   {
     imageURL: 'https://loremflickr.com/cache/resized/4646_25288239028_e3b9f6d111_329_240_nofilter.jpg',
     imageDescription: 'Exotic Cat',
-    name: 'Fluffy',
+    name: 'Mr Buttons',
     gender: 'Male',
     age: 8,
     breed: 'AmericanShorthair',
@@ -57,7 +57,7 @@ const catSeedData = [
   {
     imageURL: 'http://loremflickr.com/326/240/cat',
     imageDescription: 'Beautiful Coat',
-    name: 'MrKitty',
+    name: 'Mr Kitty',
     gender: 'Male',
     age: 12,
     breed: 'Balinese',
@@ -122,7 +122,7 @@ const dogSeedData = [
   {
     imageURL: 'https://loremflickr.com/cache/resized/4680_39461599551_226645bb25_327_240_nofilter.jpg',
     imageDescription: 'Great to have with kids',
-    name: 'Bailey',
+    name: 'Maggie',
     gender: 'Male',
     age: 10,
     breed: 'Great Dane',
@@ -149,7 +149,7 @@ const dogSeedData = [
   {
     imageURL: 'http://loremflickr.com/326/240/dog',
     imageDescription: 'Brown coat straight hair',
-    name: 'Morgan',
+    name: 'Max',
     gender: 'Male',
     age: 2,
     breed: 'German Shepard',
@@ -185,7 +185,7 @@ const dogSeedData = [
   {
     imageURL: 'http://loremflickr.com/388/240/dog',
     imageDescription: 'Great to have with kids',
-    name: 'Charlie',
+    name: 'Gracie',
     gender: 'Male',
     age: 14,
     breed: 'Bulldog',
