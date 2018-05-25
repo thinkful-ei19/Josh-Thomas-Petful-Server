@@ -49,20 +49,31 @@ app.get('/api/dogs', (req, res) => {
 /* ========DELETE ENDPOINTS ========== */
 app.delete('/api/cats', (req, res) => {
   cats.dequeue();
-  cats.enqueue(catSeedData[Math.round(Math.random() * Math.floor(10))]);
+  const randomPic = `http://loremflickr.com/3${(Math.round(Math.random() * Math.floor(30)))}/240/cat`;
+  console.log(randomPic);
+  let randCat = catSeedData[Math.round(Math.random() * Math.floor(10))];
+  randCat.imageURL = randomPic;
+  randCat.name = catSeedData[Math.floor(Math.random() * catSeedData.length)].name;
+  randCat.breed = catSeedData[Math.floor(Math.random() * catSeedData.length)].breed;
+  console.log(randCat);
+  cats.enqueue(randCat);
   res.json(peek(cats));
 
 });
 
 app.delete('/api/dogs', (req, res) => {
   dogs.dequeue();
-  // const randomPic = `http://loremflickr.com/3${(Math.round(Math.random() * Math.floor(30)))}/240/dog`;
-  // console.log(randomPic);
-  // let randDog = dogSeedData[Math.round(Math.random() * Math.floor(20))];
-  // randDog[1].imageURL = randomPic;
-  // console.log(randDog.imageURL);
-  dogs.enqueue(dogSeedData[Math.round(Math.random() * Math.floor(20))]);
-  res.json(peek(dogs));
+  const randomPic = `http://loremflickr.com/3${(Math.round(Math.random() * Math.floor(30)))}/240/dog`;
+  console.log(randomPic);
+  let randDog = dogSeedData[Math.round(Math.random() * Math.floor(10))];
+  randDog.imageURL = randomPic;
+  randDog.name = dogSeedData[Math.floor(Math.random() * dogSeedData.length)].name;
+  randDog.breed = dogSeedData[Math.floor(Math.random() * dogSeedData.length)].breed;
+  console.log(randDog);
+  dogs.enqueue(randDog);
+
+  // dogs.enqueue(dogSeedData[Math.round(Math.random() * Math.floor(10))]);
+  res.json(peek(cats));
 
 });
 
@@ -92,6 +103,6 @@ if (require.main === module) {
   runServer();
 }
 
-//console.log(Math.round(Math.random() * Math.floor(10)));
+// console.log(Math.round(Math.random() * Math.floor(10)));
 
 module.exports = { app };
