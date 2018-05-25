@@ -233,6 +233,12 @@ const { PORT, CLIENT_ORIGIN } = require('./config');
 
 const app = express();
 
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN
+  })
+);
+
 /* ========GET ENDPOINTS ========== */
 app.get('/api/cats', (req, res) => {
   res.json(peek(cats));
@@ -255,12 +261,8 @@ app.use(
     skip: (req, res) => process.env.NODE_ENV === 'test'
   })
 );
+console.log(CLIENT_ORIGIN);
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN
-  })
-);
 
 function runServer(port = PORT) {
   const server = app
