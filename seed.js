@@ -1,16 +1,16 @@
 'use strict';
 const catSeedData = [
+  // {
+  //   imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
+  //   imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+  //   name: 'Fluffy',
+  //   sex: 'Female',
+  //   age: 2,
+  //   breed: 'Bengal',
+  //   story: 'Thrown on the street'
+  // },
   {
-    imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
-    imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: 'Fluffy',
-    sex: 'Female',
-    age: 2,
-    breed: 'Bengal',
-    story: 'Thrown on the street'
-  },
-  {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/320/240/cat',
     imageDescription: 'Cute Cat',
     name: 'Whiskers',
     gender: 'Female',
@@ -19,7 +19,7 @@ const catSeedData = [
     story: 'Abandoned by previous owner'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/322/240/cat',
     imageDescription: 'Cute Cat',
     name: 'Tom',
     gender: 'Female',
@@ -28,7 +28,7 @@ const catSeedData = [
     story: 'Abandoned by previous owner'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/323/240/cat',
     imageDescription: 'Exotic Cat',
     name: 'Fluffy',
     gender: 'Male',
@@ -37,7 +37,7 @@ const catSeedData = [
     story: 'Owner moved to another country'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/324/240/cat',
     imageDescription: 'Exotic Cat',
     name: 'Fluffy',
     gender: 'Male',
@@ -46,7 +46,7 @@ const catSeedData = [
     story: 'Owner Died'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/325/240/cat',
     imageDescription: 'Loving Cat',
     name: 'Baby',
     gender: 'Male',
@@ -55,7 +55,7 @@ const catSeedData = [
     story: 'Stray'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/326/240/cat',
     imageDescription: 'Beautiful Coat',
     name: 'MrKitty',
     gender: 'Male',
@@ -64,7 +64,7 @@ const catSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/327/240/cat',
     imageDescription: 'Playful Cat',
     name: 'Whiskers',
     gender: 'Male',
@@ -73,7 +73,7 @@ const catSeedData = [
     story: 'Stray'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/328/240/cat',
     imageDescription: 'Loving Cat',
     name: 'Max',
     gender: 'Female',
@@ -82,7 +82,7 @@ const catSeedData = [
     story: 'Owner moved to another country'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/329/240/cat',
     imageDescription: 'Cute Cat',
     name: 'Tigger',
     gender: 'Female',
@@ -91,7 +91,7 @@ const catSeedData = [
     story: 'Abandoned by previous owner'
   },
   {
-    imageURL: 'http://thecatapi.com/api/images/get?api_key=[MzE3Mjk3]&format=src&results_per_page=1',
+    imageURL: 'http://loremflickr.com/330/240/cat',
     imageDescription: 'Beautiful Coat',
     name: 'Coco',
     gender: 'Female',
@@ -101,17 +101,17 @@ const catSeedData = [
   }
 ];
 const dogSeedData = [
+  // {
+  //   imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+  //   imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
+  //   name: 'Zeus',
+  //   sex: 'Male',
+  //   age: 3,
+  //   breed: 'Golden Retriever',
+  //   story: 'Owner Passed away'
+  // },
   {
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
-    sex: 'Male',
-    age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
-  },
-  {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/321/240/dog',
     imageDescription: 'Good Boy',
     name: 'Hope',
     gender: 'Female',
@@ -120,7 +120,7 @@ const dogSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/323/240/dog',
     imageDescription: 'Great to have with kids',
     name: 'Bailey',
     gender: 'Male',
@@ -129,7 +129,7 @@ const dogSeedData = [
     story: 'Owner Died'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/324/240/dog',
     imageDescription: 'Brown coat straight hair',
     name: 'Morgan',
     gender: 'Male',
@@ -138,7 +138,7 @@ const dogSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/325/240/dog',
     imageDescription: 'Tall build with short black coat',
     name: 'Scooby',
     gender: 'Female',
@@ -147,7 +147,7 @@ const dogSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/326/240/dog',
     imageDescription: 'Brown coat straight hair',
     name: 'Morgan',
     gender: 'Male',
@@ -156,7 +156,7 @@ const dogSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/327/240/dog',
     imageDescription: 'Brown coat straight hair',
     name: 'Buddy',
     gender: 'Female',
@@ -165,7 +165,7 @@ const dogSeedData = [
     story: 'Thrown on the street'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/328/240/dog',
     imageDescription: 'Curly blonde coat',
     name: 'Charlie',
     gender: 'Female',
@@ -174,7 +174,7 @@ const dogSeedData = [
     story: 'Owner Died'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/329/240/dog',
     imageDescription: 'Good Boy',
     name: 'Rover',
     gender: 'Male',
@@ -183,7 +183,7 @@ const dogSeedData = [
     story: 'Owner Died'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/388/240/dog',
     imageDescription: 'Great to have with kids',
     name: 'Charlie',
     gender: 'Male',
@@ -192,7 +192,7 @@ const dogSeedData = [
     story: 'Owner moved to another country'
   },
   {
-    imageURL: 'http://loremflickr.com/320/240/dog',
+    imageURL: 'http://loremflickr.com/319/240/dog',
     imageDescription: 'Tall build with short black coat',
     name: 'Bailey',
     gender: 'Female',

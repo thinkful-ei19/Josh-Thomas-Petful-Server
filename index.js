@@ -48,11 +48,22 @@ app.get('/api/dogs', (req, res) => {
 });
 /* ========DELETE ENDPOINTS ========== */
 app.delete('/api/cats', (req, res) => {
-  res.json(cats.dequeue());
+  cats.dequeue();
+  cats.enqueue(catSeedData[Math.round(Math.random() * Math.floor(10))]);
+  res.json(peek(cats));
+
 });
 
 app.delete('/api/dogs', (req, res) => {
-  res.json(dogs.dequeue());
+  dogs.dequeue();
+  // const randomPic = `http://loremflickr.com/3${(Math.round(Math.random() * Math.floor(30)))}/240/dog`;
+  // console.log(randomPic);
+  // let randDog = dogSeedData[Math.round(Math.random() * Math.floor(20))];
+  // randDog[1].imageURL = randomPic;
+  // console.log(randDog.imageURL);
+  dogs.enqueue(dogSeedData[Math.round(Math.random() * Math.floor(20))]);
+  res.json(peek(dogs));
+
 });
 
 app.use(
@@ -60,10 +71,11 @@ app.use(
     skip: (req, res) => process.env.NODE_ENV === 'test'
   })
 );
-console.log(CLIENT_ORIGIN);
+// // console.log(CLIENT_ORIGIN);
+// // // cats.dequeue();
 
-// cats.dequeue();
-// console.log(cats);
+// dogSeedData[0].imageURL = imageURL;
+// console.log(dogSeedData[0].imageURL);
 
 function runServer(port = PORT) {
   const server = app
@@ -79,5 +91,7 @@ function runServer(port = PORT) {
 if (require.main === module) {
   runServer();
 }
+
+//console.log(Math.round(Math.random() * Math.floor(10)));
 
 module.exports = { app };
